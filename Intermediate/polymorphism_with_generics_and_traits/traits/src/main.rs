@@ -58,3 +58,16 @@ fn main() {
     car.paint("blue");
     car.park();
 }
+
+
+trait Vehicle: Paint { // Qualquer tipo implementando Vehicle, precisa implementar Paint
+    fn park(&self);
+}
+
+/**
+ * 
+trait Vehicle: Paint + Park { -> Uma trait pode ter varias super traits... Paint e Park são supertraits de Vehicle
+}
+ */
+
+
